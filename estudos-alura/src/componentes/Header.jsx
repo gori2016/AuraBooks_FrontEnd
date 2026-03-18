@@ -2,6 +2,7 @@ import styles from './Header.module.css'
 import logo from '../imagens/logo.svg'
 import perfil from '../imagens/perfil.svg'
 import sacola from '../imagens/sacola.svg'
+import { Link } from 'react-router-dom'
 
 
 
@@ -15,14 +16,18 @@ function Header() {
                 <p><strong>Alura</strong>Books</p>
             </div>
             <ul className={styles.opcoes}>
-                {textoOpcoes.map( (texto) =>(
-                    <li className={styles.opcao}><p>{texto}</p></li>
-                ) )}
+                {textoOpcoes.map((texto) => (
+                    <li key={texto} className={styles.opcao}>
+                        <Link to="/favoritos">
+                            <p>{texto}</p>
+                        </Link>
+                    </li>
+                ))}
             </ul>
             <ul className={styles.icones}>
-                 {iconesOpcoes.map( (icone) =>(
-                   <li className={styles.icone}> <img src={icone} alt="" /></li>
-                 ) )}
+                {iconesOpcoes.map((icone) => (
+                    <li className={styles.icone}> <img src={icone} alt="" /></li>
+                ))}
             </ul>
         </header>
     )
