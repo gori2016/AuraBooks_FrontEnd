@@ -7,18 +7,21 @@ import { Link } from 'react-router-dom'
 
 
 function Header() {
-    const textoOpcoes = ["CATEGORIAS", "SOBRE NÓS", "FAVORITOS"]
+    const textoOpcoes = ["CATEGORIAS", "SOBRE-NOS", "FAVORITOS"]
     const iconesOpcoes = [perfil, sacola]
     return (
         <header className={styles.appHeader}>
-            <div className={styles.logo}>
-                <img className={styles.logoImg} src={logo} alt='aoa' />
-                <p><strong>Alura</strong>Books</p>
-            </div>
+            <Link to="/">
+                <div className={styles.logo}>
+
+                    <img className={styles.logoImg} src={logo} alt='aoa' />
+                    <p><strong>Alura</strong>Books</p>
+                </div>
+            </Link>
             <ul className={styles.opcoes}>
                 {textoOpcoes.map((texto) => (
                     <li key={texto} className={styles.opcao}>
-                        <Link to="/favoritos">
+                        <Link to={`/${texto.toLowerCase()}`}>
                             <p>{texto}</p>
                         </Link>
                     </li>
@@ -29,7 +32,7 @@ function Header() {
                     <li className={styles.icone}> <img src={icone} alt="" /></li>
                 ))}
             </ul>
-        </header>
+        </header >
     )
 }
 
