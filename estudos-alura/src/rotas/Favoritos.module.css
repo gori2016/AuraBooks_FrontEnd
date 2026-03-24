@@ -1,0 +1,36 @@
+.containerFavoritos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tituloFavoritos {
+    color: rgb(201, 201, 201);
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.tituloFavoritos2 {
+    color: rgb(21, 209, 200);
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.nomeFavoritos {
+    color: chartreuse;
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.containerResultados {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.containerResultados:hover {
+    transform: translateY(-8px);
+    /* Sobe um pouco */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}

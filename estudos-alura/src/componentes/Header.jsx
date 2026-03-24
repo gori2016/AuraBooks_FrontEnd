@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 
 function Header() {
-    const textoOpcoes = ["CATEGORIAS", "SOBRE-NOS", "FAVORITOS"]
+    const textoOpcoes = ["FAVORITOS"]
     const iconesOpcoes = [perfil, sacola]
     return (
         <header className={styles.appHeader}>
@@ -15,7 +15,7 @@ function Header() {
                 <div className={styles.logo}>
 
                     <img className={styles.logoImg} src={logo} alt='aoa' />
-                    <p><strong>Alura</strong>Books</p>
+                    <p><strong>Aura</strong>Books</p>
                 </div>
             </Link>
             <ul className={styles.opcoes}>
